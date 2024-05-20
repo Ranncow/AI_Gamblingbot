@@ -1,0 +1,25 @@
+{
+  "ai_gamblingbot": {
+    "apiKey": "openai_key"
+  },
+  "@teqfw/db": {
+    "client": "pg|mysql",
+    "connection": {
+      "database": "lollypals",
+      "host": "127.0.0.1",
+      "password": "...",
+      "user": "lollypals"
+    }
+  },
+  "@teqfw/core": {
+    "devMode": false
+  },
+  "@teqfw/web": {
+    "server": {
+      "port": 9999,
+      "useHttp1": true,
+      "useWebSocket": false
+    },
+    "urlBase": "domain.com"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "btn": {
+    "ok": "OK"
+  },
+  "layout": {
+    "main": {
+      "a": {
+        "navigator": {
+          "home": "Home"
+        },
+        "title": "The ChatBot"
+      }
+    }
+  },
+  "route": {
+    "home": {
+      "a": {}
+    }
+  }
+}

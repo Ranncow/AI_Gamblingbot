@@ -1,0 +1,12 @@
+/* Overwrite Quasar UI styles (see node_modules/quasar/dist/quasar.css:6440) */
+BODY {
+    /*--q-primary: #5B0E0E;*/
+    /*--q-secondary: #A40000;*/
+    /*--q-accent: #9C27B0;*/
+    /*--q-positive: #21BA45;*/
+    /*--q-negative: #C10015;*/
+    /*--q-info: #31CCEC;*/
+    /*--q-warning: #F2C037;*/
+    /*--q-dark: #424242;*/
+    /*--q-dark-page: #1E1F22;*/
+}

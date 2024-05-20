@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+          content="The test chatbot made with TeqFW.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>AI Chat Bot</title>
+    <style>
+        /* These are boot time styles and should be as small as possible */
+        BODY {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            /*background: linear-gradient(135deg, #A40000, #5B0E0E);*/
+        }
+
+        HTML, BODY {
+            height: 100%;
+            width: 100vw;
+        }
+
+        /* The logs display */
+        #boot {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <script type="module">
+        document.addEventListener('DOMContentLoaded', async () => {
+            // VARS
+            // const urlSw = 'sw.js';
+            const urlSw = null;
+            const nsApp = 'Gb_Front_App';
+            const cssApp = '#app';
+            const elLog = document.getElementById('boot-log');
+
+            // FUNCS
+            function fnFinalize() {
+                // remove the bootstrap element
+                const el = document.getElementById('boot');
+                if (typeof el?.remove === 'function') el.remove();
+            }
+
+            function fnLog(msg) {
+                // logs errors to UI, console and logs aggregator
+                elLog.innerHTML = msg;
+                console.log(`[app-shell]: ${msg}`);
+                // navigator.sendBeacon('https://console.wiredgeese.com/log/lollypals', msg);
+            }
+
+            function fnProgress(percent) {
+                // elProgress.innerHTML = percent;
+                console.log(`[app-shell]: ${percent}%`);
+            }
+
+            // MAIN
+            try {
+                const {bootstrap} = await import('./web/@teqfw/web/js/bootstrap.mjs');
+                bootstrap(fnLog, fnProgress, urlSw, nsApp, cssApp, fnFinalize).catch(console.error);
+            } catch (e) {
+                console.error(e);
+            }
+        });
+    </script>
+</head>
+<body>
+<div id="boot">
+    <div id="boot-log"></div>
+</div>
+<div id="app"></div>
+<!-- UMD sources for external libs -->
+<script type="application/javascript" src="./src/vue/vue.global.prod.js"></script>
+<!--<script type="application/javascript" src="./src/vue-router/vue-router.global.prod.js"></script>-->
+<script type="application/javascript" src="./src/quasar/quasar.umd.prod.js"></script>
+<script type="application/javascript" src="./src/quasar/icon-set/svg-material-icons.umd.prod.js"></script>
+<link href="/quasar/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./src/quasar/quasar.prod.css">
+<!--<script type="application/javascript" src="./src/i18n-bld/i18nextBrowserLanguageDetector.js"></script>-->
+<!-- overwrite all other styles -->
+<link rel="stylesheet" href="./styles.css">
+</body>
+</html>

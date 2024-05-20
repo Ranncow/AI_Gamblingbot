@@ -1,0 +1,48 @@
+.t-lo-center {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.t-lo-main-page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.t-lo-main-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.t-lo-main-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-end;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.t-lo-main-input {
+    width: 100%;
+    min-height: 50px;
+    max-height: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+    /*border: 1px solid #ccc;*/
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 1.5;
+
+    & TEXTAREA {
+        max-height: calc(200px - 10px - 10px);
+    }
+}

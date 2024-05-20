@@ -1,0 +1,13 @@
+{
+  "@teqfw/di": {
+    "autoload": {
+      "ns": "Gb",
+      "path": "./src"
+    }
+  },
+  "@teqfw/web-api": {
+    "services": [
+      "Gb_Back_Web_Api_Chat_Send"
+    ]
+  }
+}
