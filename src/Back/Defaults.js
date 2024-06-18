@@ -3,6 +3,8 @@
  */
 export default class Gb_Back_Defaults {
 
+    CLI_PREFIX = 'app';
+
     /** @type {Gb_Shared_Defaults} */
     SHARED;
 

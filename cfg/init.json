@@ -3,12 +3,12 @@
     "apiKey": "openai_key"
   },
   "@teqfw/db": {
-    "client": "pg|mysql",
+    "client": "mysql",
     "connection": {
-      "database": "lollypals",
+      "database": "db",
       "host": "127.0.0.1",
       "password": "...",
-      "user": "lollypals"
+      "user": "user"
     }
   },
   "@teqfw/core": {

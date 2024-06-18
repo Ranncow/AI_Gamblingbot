@@ -1,0 +1,20 @@
+{
+  "entity": {
+    "content": {
+      "comment": "The content items transferred from WordPress.",
+      "attr": {
+        "id": {"type": "ref", "comment": "The post_id tag from the imported data."},
+        "post_type": {"type": "string", "comment": "The WordPress post type."},
+        "content": {"type": "text", "comment": "The content of the imported data."},
+        "date_created": {
+          "comment": "Date-time when record was created.",
+          "type": "datetime",
+          "default": "current"
+        }
+      },
+      "index": {
+        "pk": {"type": "primary", "attrs": ["id"]}
+      }
+    }
+  }
+}

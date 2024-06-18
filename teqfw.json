@@ -5,6 +5,11 @@
       "path": "./src"
     }
   },
+  "@teqfw/core": {
+    "commands": [
+      "Gb_Back_Cli_Parse"
+    ]
+  },
   "@teqfw/web-api": {
     "services": [
       "Gb_Back_Web_Api_Chat_Send"

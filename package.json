@@ -16,6 +16,7 @@
   },
   "repository": "github:Ranncow/AI_Gamblingbot",
   "scripts": {
+    "db-init": "node ./bin/tequila.mjs db-init",
     "help": "node ./bin/tequila.mjs -h",
     "start": "node ./bin/tequila.mjs web-server-start",
     "stop": "node ./bin/tequila.mjs web-server-stop",
@@ -32,7 +33,6 @@
     "@teqfw/web-api": "github:teqfw/web-api",
     "mysqli": "^3.1.4",
     "openai": "^4.47.1",
-    "pg": "^8.11.3",
     "quasar": "2.14.5"
   },
   "devDependencies": {
