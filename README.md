@@ -14,6 +14,15 @@ Copy the `./cfg/init.json` into the `./cfg/local.json` and set up the local conf
   "@teqfw/core": {
     "devMode": true
   },
+  "@teqfw/db": {
+    "client": "mysql",
+    "connection": {
+      "database": "...",
+      "host": "127.0.0.1",
+      "password": "...",
+      "user": "..."
+    }
+  },
   "@teqfw/web": {
     "server": {
       "port": 9999,
